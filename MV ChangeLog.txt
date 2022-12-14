@@ -1,0 +1,4 @@
+1.0.2
+Function findNextPlacehold added to exclude comments and scripts
+Variable names made more consistent
+Use of class streamPsn rather than locals
