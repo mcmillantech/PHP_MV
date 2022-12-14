@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>{title}</title>
+<style>
+	h1 {color: #ce2152;}
+	h2 {color: #ce2152;}
+	h3 {color: #ce2152;}
+</style>
+</head>
+
+<body>
+    <h1>Demo of MV scheme</h1>
+    Field 1 <{test1}><br>
+    <!-- Here is a comment <{false token}> -->
+    Field 2 <{test2}>
+    <h3>Here is a list of rivers <{itemlist}> </h3>
+	River<br>
+	<span id='<{id}>' style='width:60px'><{river}> </span>
+	<span style='position:absolute; left:130px'><{country}> </span>
+	<button style='position:absolute; left:230px' onClick='show("<{id}>")'>
+	Show</button><br>
+	<hr>
+    <{/itemlist}><br>
+    Footer text<br>
+    <{test9}><br>
+
+<!--
+<{false token}>
+-->
+This text is after a comment<br>
+<script>
+//	-------------------------------
+//	Handler for Show button
+//
+//	Display the river
+//  -------------------------------
+function show(id)
+{
+	var el = document.getElementById(id);
+	var txt = el.innerHTML;
+	alert(txt);
+}
+</script>
+</body>
+</html>
